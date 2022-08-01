@@ -8,8 +8,7 @@
             <button class=" bg-fuchsia-400 text-white font-semibold py-2 px-4 rounded" :class="{'butt': !this.$store.state.blogPhotoFileURL}">Preview Photo</button>
         </div>
         <vue-editor v-model="blogHTML"></vue-editor>
-        <button @click="submit" class="my-4 px-4 py-2 bg-fuchsia-300 rounded font-semibold">Submit</button>
-        
+        <ButtonComp buttonName="submit"/>
     </div>
     
   </div>
@@ -17,10 +16,13 @@
 
 <script>
 import { VueEditor } from "vue3-editor";
+import ButtonComp from '../components/ButtonComp.vue';
+
 
 export default {
   components: {
-    VueEditor
+    VueEditor,
+    ButtonComp
   },
 
   data() {
