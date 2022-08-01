@@ -58,7 +58,7 @@ export default {
             });
             console.log(result);
             if(result.status==201){
-                localStorage.setItem("user-info",JSON.stringify(result.data))
+                // localStorage.setItem("user-info",JSON.stringify(result.data))
                 this.firstName="",
                 this.lastName="",
                 this.phoneNumber="",
@@ -70,11 +70,11 @@ export default {
          
     },
      mounted(){
-            let user = localStorage.getItem('user-info');
-            console.log(user);
-            if(user){
-                this.$router.push({name: "home"})
-            }
+            // let user = localStorage.getItem('user-info');
+            // console.log(user);
+            // if(user){
+            //     this.$router.push({name: "home"})
+            // }
         },
     
 }

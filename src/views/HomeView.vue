@@ -56,11 +56,11 @@ export default {
     },
   },
   mounted(){
-            let user = localStorage.getItem('user-info');
-            console.log(user);
-            if(!user){
-                this.$router.push({name: "login"})
-            }
+            // let user = localStorage.getItem('user-info');
+            // console.log(user);
+            // if(!user){
+            //     this.$router.push({name: "login"})
+            // }
         },
 
 }

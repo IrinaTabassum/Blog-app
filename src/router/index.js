@@ -4,6 +4,7 @@ import BlogView from '../views/BlogView.vue'
 import LoginPage from '../views/LoginView.vue'
 import RegisterPage from '../views/RegisterView.vue'
 import ForgrtPassword from '../views/ForgetPassword.vue'
+import CreateBlog from '../views/CreateBlogView.vue'
 
 const routes = [
   {
@@ -15,11 +16,19 @@ const routes = [
     },
   },
   {
-    path: '/about',
+    path: '/blog',
     name: 'blog',
     component: BlogView,
     meta:{
       title:'Blog'
+    },
+  },
+  {
+    path: '/create-blog',
+    name: 'creatBlog',
+    component: CreateBlog,
+    meta:{
+      title:'Creat-blog'
     },
   },
   {

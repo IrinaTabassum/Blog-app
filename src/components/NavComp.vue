@@ -8,6 +8,8 @@
     <div class="sm:block hidden sm:w-2/3 w-1/3 text-right text-xl font-semibold sm:space-x-4">
       <router-link class="" to="/">Home</router-link> 
       <router-link class="" :to="{name: 'blog'}">Blog </router-link>
+      <router-link class="" :to="{name: 'creatBlog'}">Create </router-link>
+
       <router-link class="" :to="{name: 'login'}">Login/Register </router-link>
     </div>
     <div class="sm:hidden w-1/3 flex justify-end">
@@ -22,6 +24,7 @@
       </button>
       <router-link class="block" to="/">Home</router-link> 
       <router-link class="block" :to="{name: 'blog'}">Blog </router-link>
+      <router-link class="block" :to="{name: 'creatBlog'}">Create </router-link>
       <router-link class="block" :to="{name: 'login'}">Login/Register </router-link>
     </div>
   </nav>

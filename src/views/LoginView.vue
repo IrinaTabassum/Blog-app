@@ -9,13 +9,13 @@
             <form class="" @submit.prevent="login">
                 <div class="pb-4">
                     <label class="block pb-2 font-semibold" for="">Email</label>
-                    <input class="input-style" type="email" >
+                    <input v-model="email" class="input-style" type="email" >
                 </div>
                 <div class="pb-4">
                     <label class="block pb-2 font-semibold" for="">Password</label>
-                    <input class="input-style" type="password">
+                    <input v-model="password" class="input-style" type="password">
                 </div>
-                <button @click="login" class="button-style">Login</button>
+                <button type="submit" class="button-style">Login</button>
                 <div class="flex flex-wrap justify-center pb-4">
                 <p class="pr-2 text-right">Forget password</p>
                 <router-link class=" underline" :to="{name:'forgetpassword'}">Rsate password</router-link>
@@ -26,11 +26,39 @@
     </div>
 </template>
 <script>
-
+import axios from 'axios';
 export default {
-    setup() {
-        
+    name: "LoginPage",
+    data(){
+        return{
+            email:"",
+            password:"",
+        }
+    },  
+    methods:{
+       async login(){
+            let result = await axios.get(`http://localhost:3000/user?email=${this.email}&password=${this.password}`);
+            console.log(result);
+            if(result.status==200){
+                // localStorage.setItem("user-info",JSON.stringify(result.data))
+                this.email="",
+                this.password=""
+                this.$router.push({name: "home"})  
+            }
+            else{
+                console.log("Incurrect email or passwprd")
+            }
+        },
+         
     },
+     mounted(){
+            // let user = localStorage.getItem('user-info');
+            // console.log(user);
+            // if(user){
+            //     this.$router.push({name: "home"})
+            // }
+        },
+    
 }
 </script>
 <style scoped>
