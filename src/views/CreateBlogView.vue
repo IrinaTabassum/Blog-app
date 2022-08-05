@@ -58,6 +58,7 @@ export default {
     },
     takeInput(e){
       this.images= e.target.files[0];
+      console.log(this.images);
     },
     blogdata(){
         this.$store.commit({
@@ -68,6 +69,7 @@ export default {
           type: 'updateBlogTitle',
           value : this.blogTitle
         })
+        this.$store.commit("profileImg",{value:this.images});
     },
      preview(){
         this.$store.commit("newBlogPost",{value : this.content});
@@ -75,6 +77,7 @@ export default {
           type: 'updateBlogTitle',
           value : this.blogTitle
         })
+        this.$store.commit("profileImg",{value : this.images});
         this.$router.push({name: 'preview-post'});
 
     },

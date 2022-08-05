@@ -2,6 +2,7 @@
   <div class="min-h-screen container mx-auto">
     <div class="md:px-8 px-4">
         <p  class="py-8 text-xl font-semibold text-center underline">{{ blogTitle }}</p>
+      <img src="" alt="">
         <div id="sss" class="sss py-8 lg:px-22" v-html="blogHTML">
        
         </div> 
@@ -35,7 +36,11 @@ export default {
 
     blogTitle(){
       return this.$store.state.blogTitle;
+    },
+    blogImage(){
+      return this.$store.state.profileImg;
     }
+
     // blogTitle:{
     //   get(){
     //     return this.$store.state.blogTitle;

@@ -14,6 +14,7 @@ export default createStore({
     loginAuth:false,
     blogTitle:"",
     blogHTML:"",
+    blogImg:"",
     blogPhotoFileURL:null,
     blogPhotoPreview:null,
     profileId:null
@@ -27,6 +28,9 @@ export default createStore({
     },
     updateBlogTitle(state,payload){
       state.blogTitle=payload.value;
+    },
+    profileImg(state,payload){
+      state.blogImg=payload.value;
       console.log(state.blogTitle)
 
     },
