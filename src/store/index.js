@@ -13,7 +13,7 @@ export default createStore({
     editPost:false,
     loginAuth:false,
     blogTitle:"",
-    blogHTML:"this is my blog",
+    blogHTML:"",
     blogPhotoFileURL:null,
     blogPhotoPreview:null,
     profileId:null
@@ -22,15 +22,18 @@ export default createStore({
   },
   mutations: {
     newBlogPost(state,payload){
-      state.blogHTML=payload;
-      console.log(state.blogHTML)
+      state.blogHTML=payload.value;
+      
     },
     updateBlogTitle(state,payload){
-      state.blogTitle=payload;
+      state.blogTitle=payload.value;
+      console.log(state.blogTitle)
+
     },
     toggleEditPost(state, payload){
-      state.editPost = payload;
+      state.editPost = payload.value;
       console.log(state.editPost);
+      
     }
   },
   actions: {

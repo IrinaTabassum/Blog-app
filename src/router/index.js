@@ -5,6 +5,7 @@ import LoginPage from '../views/LoginView.vue'
 import RegisterPage from '../views/RegisterView.vue'
 import ForgrtPassword from '../views/ForgetPassword.vue'
 import CreateBlog from '../views/CreateBlogView.vue'
+import PrediewPost from '../views/PreviewPost.vue'
 
 const routes = [
   {
@@ -29,6 +30,14 @@ const routes = [
     component: CreateBlog,
     meta:{
       title:'Creat-blog'
+    },
+  },
+  {
+    path: '/preview-Post',
+    name: 'preview-post',
+    component: PrediewPost,
+    meta:{
+      title:'previed-blog'
     },
   },
   {
