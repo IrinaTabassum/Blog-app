@@ -37,9 +37,7 @@ export default {
     blogTitle(){
       return this.$store.state.blogTitle;
     },
-    blogImage(){
-      return this.$store.state.profileImg;
-    }
+    
 
     // blogTitle:{
     //   get(){
