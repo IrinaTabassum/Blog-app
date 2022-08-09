@@ -32,6 +32,7 @@ export default {
    },
    computed:{
     editPost(){
+        console.log(this.$store.state.editPost)
         return this.$store.state.editPost;
     }
    }
